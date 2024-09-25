@@ -17,19 +17,25 @@ let isGameRunning = false;
 let jumpBoots = false;
 let jetpack = false;
 
-// Maze boundaries
+// Maze walls (for demonstration, create a simple maze layout)
 const mazeWalls = [
     { x: 0, y: 0, width: 800, height: 20 }, // Top wall
     { x: 0, y: 580, width: 800, height: 20 }, // Bottom wall
-    // Add more walls as needed
+    { x: 100, y: 100, width: 20, height: 400 }, // Vertical wall
+    { x: 300, y: 200, width: 20, height: 400 }, // Vertical wall
+    { x: 200, y: 300, width: 200, height: 20 }, // Horizontal wall
+    { x: 600, y: 100, width: 20, height: 200 }, // Vertical wall
+    { x: 400, y: 400, width: 200, height: 20 } // Horizontal wall
 ];
 
+// Collectable coins
 const collectables = [
-    { x: 100, y: 100, type: 'coin' },
-    { x: 200, y: 150, type: 'coin' },
-    // Add more collectables as needed
+    { x: 150, y: 150, type: 'coin' },
+    { x: 250, y: 350, type: 'coin' },
+    { x: 450, y: 150, type: 'coin' },
 ];
 
+// Draw maze function
 const drawMaze = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'green';
@@ -153,14 +159,4 @@ document.getElementById('buy-jump-boots').addEventListener('click', () => {
     }
 });
 
-document.getElementById('buy-jetpack').addEventListener('click', () => {
-    if (player.coins >= 30) {
-        player.coins -= 30;
-        jetpack = true;
-        coinsDisplay.textContent = player.coins;
-        alert('Jetpack purchased!');
-    } else {
-        alert('Not enough coins!');
-    }
-});
-                        
+document.getElement
