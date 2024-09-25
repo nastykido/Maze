@@ -1,44 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maze Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="game-container">
-        <div id="signup">
-            <h2>Sign Up</h2>
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="date" id="dob" required>
-            <button id="start-game">Start Game</button>
-        </div>
-        <div id="game" class="hidden">
-            <h1>Maze Game</h1>
-            <p>Points: <span id="points">0</span></p>
-            <p>Coins: <span id="coins">0</span></p>
-            <p>Time Left: <span id="timer">60</span> seconds</p>
-            <div id="controls">
-                <button id="up">↑</button>
-                <button id="down">↓</button>
-                <button id="left">←</button>
-                <button id="right">→</button>
-                <button id="toggle-controls">Toggle Controls</button>
-            </div>
-            <canvas id="maze" width="800" height="600"></canvas>
-            <div id="shop">
-                <h3>Shop</h3>
-                <p>Jump Boots: <span id="jump-price">15 Coins</span></p>
-                <button id="buy-jump-boots">Buy Jump Boots</button>
-                <p>Jetpack: <span id="jetpack-price">30 Coins</span></p>
-                <button id="buy-jetpack">Buy Jetpack</button>
-            </div>
-            <div id="end-message" class="hidden">
-                <h2>Congratulations <span id="user-name-display"></span>, you completed this level!</h2>
-            </div>
-        </div>
+<div id="game-container">
+    <div id="signup">
+        <h2>Sign Up</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="date" id="dob" required>
+        <button id="start-game">Start Game</button>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <div id="game-area" class="hidden">
+        <h1>Maze Game</h1>
+        <div id="username-display"></div>
+        <div id="level-display" class="level"></div>
+        <div id="coin-display">Coins: 0</div>
+        <div id="maze"></div>
+        <div id="controls">
+            <button id="up">Up</button>
+            <button id="down">Down</button>
+            <button id="left">Left</button>
+            <button id="right">Right</button>
+        </div>
+        <div id="shop">
+            <img src="shop-icon.png" alt="Shop Icon" onclick="openShop()">
+        </div>
+        <div id="end-message" class="hidden"></div>
+    </div>
+</div>
