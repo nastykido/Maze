@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(to right, cyan, pink);
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+#game-container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#controls button {
+    margin: 5px;
+    padding: 10px;
+}
+
+#shop {
+    margin-top: 20px;
+}
+
+#end-message {
+    margin-top: 20px;
+}
